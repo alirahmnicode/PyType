@@ -23,13 +23,13 @@ class Main:
 
         # delay time
         secounds = get_time.get_delay_time()
-        print(secounds)
 
         # calculate score
         get_score = score.Score(
-            correction['less_word_count'], correction['wrong_count'], secounds)
-        
-        calculate = get_score.p()
+            correction['less_word_count'], correction['wrong_count'], correction['correct_word_count'], correction['word_count']*1.3, secounds)
+
+        calculate = get_score.calculate_score()
+        message = print(calculate)
 
 
 if __name__ == '__main__':
